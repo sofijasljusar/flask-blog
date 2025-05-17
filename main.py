@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("index.html", posts=ALL_POSTS)
+    return render_template("index2.html", posts=ALL_POSTS)
 
 
 @app.route('/post/<int:post_id>')
