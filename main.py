@@ -25,9 +25,16 @@ def post(post_id):
 def about():
     return render_template("page-about.html")
 
+
 @app.route('/category')
 def category():
     return render_template("category.html")
+
+
+@app.route('/style-guide')
+def style_guide():
+    return render_template("style-guide.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
