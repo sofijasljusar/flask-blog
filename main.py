@@ -36,5 +36,10 @@ def style_guide():
     return render_template("style-guide.html")
 
 
+@app.route('/contact')
+def contact():
+    return render_template("page-contact.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
