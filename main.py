@@ -46,6 +46,10 @@ def single_standard_post():
     return render_template('single-standard.html')
 
 
+@app.route('/video-post')
+def single_video_post():
+    return render_template('single-video.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

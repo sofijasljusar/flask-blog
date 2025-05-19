@@ -1,27 +1,23 @@
 {% extends 'base.html' %}
 
-{% block title %}Post - Wordsmith{% endblock title %}
+{% block title %}Video Post - Wordsmith{% endblock title %}
 
 {% block content %}
     <!-- s-content
     ================================================== -->
     <section class="s-content s-content--top-padding s-content--narrow">
 
-        <article class="row entry format-standard">
+        <article class="row entry format-video">
 
             <div class="entry__media col-full">
-                <div class="entry__post-thumb">
-                    <img src="{{ url_for('static', filename='images/thumbs/single/standard/standard-1000.jpg') }}"
-                         srcset="{{ url_for('static', filename='images/thumbs/single/standard/standard-2000.jpg') }} 2000w,
-                                 {{ url_for('static', filename='images/thumbs/single/standard/standard-1000.jpg') }} 1000w,
-                                 {{ url_for('static', filename='images/thumbs/single/standard/standard-500.jpg') }} 500w"
-                         sizes="(max-width: 2000px) 100vw, 2000px" alt="">
-                </div>
+                <div class="video-container">
+                    <iframe src="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div> 
             </div>
 
             <div class="entry__header col-full">
                 <h1 class="entry__header-title display-1">
-                    This Is A Standard Format Post.
+                    Hello Folks, This is a  Video Post.
                 </h1>
                 <ul class="entry__header-meta">
                     <li class="date">June 15, 2018</li>
@@ -40,10 +36,9 @@
                 </p>
 
                 <p>
-
-                <img src="{{ url_for('static', filename='images/wheel-1000.jpg') }}" {# default for browser not supporting srcset #}
-                     srcset="{{ url_for('static', filename='images/wheel-1000.jpg') }} 1000w, {# gets based on screen size #}
-                             {{ url_for('static', filename='images/wheel-500.jpg') }} 500w" {# not requested if wide screen, so seems to work even if not exists #}
+                <img src="{{ url_for('static', filename='images/wheel-1000.jpg') }}"
+                     srcset="{{ url_for('static', filename='images/wheel-1000.jpg') }} 1000w,
+                             {{ url_for('static', filename='images/wheel-500.jpg') }} 500w"
                      sizes="(max-width: 2000px) 100vw, 2000px" alt="">
                 </p>
 
@@ -106,6 +101,7 @@
                         </span>
                     </div> <!-- end entry__tags -->
                 </div> <!-- end s-content__taxonomies -->
+                
 
                 <div class="entry__author">
                     <img src="{{ url_for('static', filename='images/avatars/user-03.jpg.webp') }}" alt="">
@@ -126,7 +122,7 @@
                     </div>
                 </div>
 
-            </div> <!-- s-entry__main -->
+            </div> <!-- entry__main -->
 
         </article> <!-- end entry/article -->
 
@@ -308,7 +304,7 @@
                         </li>  <!-- end comment level 1 -->
 
                     </ol>
-                    <!-- END commentlist -->           
+                    <!-- END commentlist -->
 
                 </div> <!-- end col-full -->
             </div> <!-- end comments -->
