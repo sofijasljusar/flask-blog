@@ -103,7 +103,8 @@
             {% include 'partials/entries.html' %}
         </div> <!-- end entries-wrap -->
 
-        {% include 'partials/pagination.html' %}
+        {% include 'partials/pagination.html' with context%}
+        {# ensures the current template variables (posts) are accessible in entries.html #}
 
     </section> <!-- end s-content -->
 

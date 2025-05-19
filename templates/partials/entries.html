@@ -1,21 +1,23 @@
 <div class="entries">
+    {% for post in posts %}
 
     <article class="col-block">
 
         <div class="item-entry" data-aos="zoom-in">
             <div class="item-entry__thumb">
                 <a href="{{ url_for('single_standard_post') }}" class="item-entry__thumb-link">
-                    <img src="{{ url_for('static', filename='images/thumbs/post/lamp-400.jpg.webp') }}"
-                         srcset="{{ url_for('static', filename='images/thumbs/post/lamp-400.jpg.webp') }} 1x, {{ url_for('static', filename='images/thumbs/post/lamp-800.jpg.webp') }} 2x" alt="">
+                    <img src="{{ post.image_url }}"
+                         srcset="{{ post.image_url }} 1x,
+                                 {{ post.image_url }} 2x" alt="">
                 </a>
             </div>
 
             <div class="item-entry__text">
                 <div class="item-entry__cat">
-                    <a href="{{ url_for('category') }}">Design</a>
+                    <a href="{{ url_for('category') }}">Python</a>
                 </div>
 
-                <h1 class="item-entry__title"><a href="{{ url_for('single_standard_post') }}">3 Benefits of Minimalism In Interior Design.</a></h1>
+                <h1 class="item-entry__title"><a href="{{ url_for('single_standard_post') }}">{{ post.title }}</a></h1>
 
                 <div class="item-entry__date">
                     <a href="{{ url_for('single_standard_post') }}">June 15, 2018</a>
@@ -25,7 +27,8 @@
 
     </article> <!-- end article -->
 
-    <article class="col-block">
+    {% endfor %}:
+{#    <article class="col-block">
 
         <div class="item-entry" data-aos="zoom-in">
             <div class="item-entry__thumb">
@@ -298,6 +301,6 @@
             </div>
         </div> <!-- item-entry -->
 
-    </article> <!-- end article -->
+    </article> <!-- end article -->#}
 
 </div> <!-- end entries -->

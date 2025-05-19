@@ -2,10 +2,10 @@ import requests
 from flask import Flask, render_template
 from post import Post
 
-DATA_LINK = "https://api.npoint.io/c790b4d5cab58020d391"
-POSTS_DATA = requests.get(DATA_LINK).json()
-ALL_POSTS = [Post(post["id"], post["title"], post["subtitle"], post["body"]) for post in POSTS_DATA]
-
+DATA_LINK = "https://api.npoint.io/e9c7d09563544c2d60f6"
+# POSTS_DATA = requests.get(DATA_LINK).json()
+# ALL_POSTS = [Post(post["id"], post["title"], post["subtitle"], post["body"]) for post in POSTS_DATA]
+ALL_POSTS = requests.get(DATA_LINK).json()
 app = Flask(__name__)
 
 
