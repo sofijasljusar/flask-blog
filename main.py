@@ -21,5 +21,13 @@ def post(post_id):
             return render_template("post.html", post=blog_post)
 
 
+@app.route('/about')
+def about():
+    return render_template("page-about.html")
+
+@app.route('/category')
+def category():
+    return render_template("category.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
