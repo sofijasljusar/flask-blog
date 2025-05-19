@@ -51,5 +51,10 @@ def single_video_post():
     return render_template('single-video.html')
 
 
+@app.route('/audio-post')
+def single_audio_post():
+    return render_template('single-audio.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)
