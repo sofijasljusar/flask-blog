@@ -5,7 +5,7 @@
 
         <div class="item-entry" data-aos="zoom-in">
             <div class="item-entry__thumb">
-                <a href="{{ url_for('single_standard_post') }}" class="item-entry__thumb-link">
+                <a href="{{ url_for('single_standard_post', post_id=post.post_id) }}" class="item-entry__thumb-link">
                     <img src="{{ post.image_url }}"
                          srcset="{{ post.image_url }} 1x,
                                  {{ post.image_url }} 2x" alt="">
@@ -17,10 +17,10 @@
                     <a href="{{ url_for('category') }}">Python</a>
                 </div>
 
-                <h1 class="item-entry__title"><a href="{{ url_for('single_standard_post') }}">{{ post.title }}</a></h1>
+                <h1 class="item-entry__title"><a href="{{ url_for('single_standard_post', post_id=post.post_id) }}">{{ post.title }}</a></h1>
 
                 <div class="item-entry__date">
-                    <a href="{{ url_for('single_standard_post') }}">June 15, 2018</a>
+                    <a href="{{ url_for('single_standard_post', post_id=post.post_id) }}">June 15, 2018</a>
                 </div>
             </div>
         </div> <!-- item-entry -->

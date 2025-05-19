@@ -14,11 +14,11 @@ def home():
     return render_template("index2.html", posts=ALL_POSTS)
 
 
-@app.route('/post/<int:post_id>')
-def post(post_id):
-    for blog_post in ALL_POSTS:
-        if blog_post.post_id == post_id:
-            return render_template("post.html", post=blog_post)
+# @app.route('/post/<int:post_id>')
+# def post(post_id):
+#     for blog_post in ALL_POSTS:
+#         if blog_post.post_id == post_id:
+#             return render_template("post.html", post=blog_post)
 
 
 @app.route('/about')
@@ -41,9 +41,11 @@ def contact():
     return render_template("page-contact.html")
 
 
-@app.route('/post')
-def single_standard_post():
-    return render_template('single-standard.html')
+@app.route('/post/<int:post_id>')
+def single_standard_post(post_id):
+    for blog_post in ALL_POSTS:
+        if blog_post["post_id"] == post_id:
+            return render_template("single-standard.html", post=blog_post)
 
 
 @app.route('/video-post')

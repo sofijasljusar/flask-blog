@@ -11,17 +11,17 @@
 
             <div class="entry__media col-full">
                 <div class="entry__post-thumb">
-                    <img src="{{ url_for('static', filename='images/thumbs/single/standard/standard-1000.jpg') }}"
-                         srcset="{{ url_for('static', filename='images/thumbs/single/standard/standard-2000.jpg') }} 2000w,
-                                 {{ url_for('static', filename='images/thumbs/single/standard/standard-1000.jpg') }} 1000w,
-                                 {{ url_for('static', filename='images/thumbs/single/standard/standard-500.jpg') }} 500w"
+                    <img src="{{ post.image_url }}"
+                         srcset="{{ post.image_url }} 2000w,
+                                 {{ post.image_url }} 1000w,
+                                 {{ post.image_url }} 500w"
                          sizes="(max-width: 2000px) 100vw, 2000px" alt="">
                 </div>
             </div>
 
             <div class="entry__header col-full">
                 <h1 class="entry__header-title display-1">
-                    This Is A Standard Format Post.
+                    {{ post.title }}
                 </h1>
                 <ul class="entry__header-meta">
                     <li class="date">June 15, 2018</li>
@@ -34,9 +34,11 @@
 
             <div class="col-full entry__main">
 
-                <p class="lead drop-cap">Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint.</p>
-                
-                <p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+{#                <p class="lead drop-cap">Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint.</p>#}
+                <p class="lead drop-cap">{{ post.subtitle }}</p>
+
+{#                <p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.#}
+                <p>{{ post.body }}
                 </p>
 
                 <p>

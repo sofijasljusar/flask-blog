@@ -3331,6 +3331,15 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
 
 .entry__media, .entry__post-thumb {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entry__post-thumb img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* -------------------------------------------------------------------

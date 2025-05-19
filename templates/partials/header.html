@@ -46,7 +46,7 @@
                 <ul class="sub-menu">
                     <li><a href="{{ url_for('single_video_post') }}">Video Post</a></li>
                     <li><a href="{{ url_for('single_audio_post') }}">Audio Post</a></li>
-                    <li><a href="{{ url_for('single_standard_post') }}">Standard Post</a></li>
+                    <li><a href="{{ url_for('single_standard_post', post_id=0) }}">Standard Post</a></li>
                 </ul>
             </li>
             <li><a href="{{ url_for('style_guide') }}" title="">Styles</a></li>
