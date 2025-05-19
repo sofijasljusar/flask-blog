@@ -41,5 +41,11 @@ def contact():
     return render_template("page-contact.html")
 
 
+@app.route('/post')
+def single_standard_post():
+    return render_template('single-standard.html')
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
